@@ -18,13 +18,17 @@ const app = express();
 // }
 
 
-greet(); // TypeError: greet is not a function
-var greet = function () {
-    console.log("Hello!");
-};
+// greet(); // TypeError: greet is not a function
+// var greet = function () {
+//     console.log("Hello!");
+// };
 
 
 
+// let numbers = [1, 2, 3, 4, 5];
+// // numbers.forEach(function(number) {
+//     console.log(numbers); // 1, 2, 3, 4, 5
+// // });
 
 
 
