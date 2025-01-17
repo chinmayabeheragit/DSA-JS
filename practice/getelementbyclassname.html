@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p class="text">Paragraph 1</p>
+  <p class="text">Paragraph 2</p>
+  <p class="text1">Paragraph 3</p>
+  <script>
+    const paragraphs = document.getElementsByClassName("text");
+    const paragraphs1 = document.getElementsByClassName("text1");
+    console.log(paragraphs); // Logs: HTMLCollection [p.text, p.text]
+    for (let p of paragraphs && paragraphs1) {
+      p.style.color = "green"; // Changes text color of both paragraphs with class 'text' to green
+    }
+  </script>
+</body>
+</html>

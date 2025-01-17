@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1 id="title" class="header">Hello</h1>
+  <p class="text">Paragraph 1</p>
+  <p class="text">Paragraph 2</p>
+  <script>
+    const paragraphs = document.querySelectorAll(".text");
+    console.log(paragraphs); // Logs: NodeList [p.text, p.text]
+    paragraphs.forEach(p => {
+      p.style.color = "red"; // Changes text color of all paragraphs with class 'text' to red
+    });
+  </script>
+</body>
+</html>

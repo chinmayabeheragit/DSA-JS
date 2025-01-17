@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>Div 1</div>
+  <div>Div 2</div>
+  <p>Paragraph</p>
+  <script>
+    const divs = document.getElementsByTagName("div");
+    console.log(divs); // Logs: HTMLCollection [div, div]
+    for (let div of divs) {
+      div.style.backgroundColor = "lightblue"; // Changes background color of all divs
+    }
+  </script>
+</body>
+</html>
