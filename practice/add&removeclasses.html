@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p id="text" class="highlight">This is a paragraph.</p>
+  <script>
+    const text = document.getElementById("text");
+
+    // Add a class
+    text.classList.add("bold");
+
+    // Remove a class
+    text.classList.remove("highlight");
+
+    console.log(text.className); // Logs: "bold"
+  </script>
+</body>
+</html>

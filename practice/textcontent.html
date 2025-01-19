@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="container">Original <b>HTML</b> content.</div>
+  <script>
+    const container = document.getElementById("container");
+
+    // Get plain text content
+    console.log(container.textContent); // Logs: Original HTML content.
+
+    // Set new text content (ignores HTML tags)
+    container.textContent = "Updated plain text content.";
+  </script>
+</body>
+</html>

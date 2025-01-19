@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="btn">Click Me</button>
+  <script>
+    const button = document.getElementById("btn");
+
+    function handleClick() {
+      alert("Button clicked!");
+    }
+
+    // Add the event listener
+    button.addEventListener("click", handleClick);
+    console.log(button);
+
+    // Remove the event listener
+    button.removeEventListener("click", handleClick);
+  </script>
+</body>
+</html>

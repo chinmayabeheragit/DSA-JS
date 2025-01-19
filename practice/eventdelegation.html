@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <button id="addItem">Add Item</button>
+  <script>
+    const list = document.getElementById("list");
+    const button = document.getElementById("addItem");
+
+    // Add event listener to the parent (ul)
+    list.addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        alert(event.target.textContent); // Shows the clicked item's text
+      }
+    });
+
+    // Dynamically add new list items
+    button.addEventListener("click", () => {
+      const newItem = document.createElement("li");
+      newItem.textContent = `I Love U ${list.children.length + 1}`;
+      list.appendChild(newItem);
+    });
+  </script>
+</body>
+</html>

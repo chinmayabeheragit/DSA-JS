@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="container">Original <b>HTML</b> content.</div>
+  <script>
+    const container = document.getElementById("container");
+
+    // Get HTML content
+    console.log(container.innerHTML); // Logs: Original <b>HTML</b> content.
+
+    // Set new HTML content
+    container.innerHTML = "<p>Updated <i>HTML</i> content.</p>";
+  </script>
+</body>
+</html>
