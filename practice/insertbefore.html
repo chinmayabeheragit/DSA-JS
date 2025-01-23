@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 3</li>
+  </ul>
+  <script>
+    const list = document.getElementById("list");
+
+    // Create a new <li> element
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item 2";
+
+    // Insert the new item before "Item 3"
+    const referenceItem = list.children[1];
+    list.insertBefore(newItem, referenceItem);
+  </script>
+</body>
+</html>

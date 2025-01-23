@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="myButton">Click or Hover Me</button>
+  <script>
+    const button = document.getElementById("myButton");
+
+    // Define the event handler
+    function handleEvent(event) {
+      console.log(`Event type: ${event.type}`);
+    }
+
+    // Add the same function for multiple event types
+    button.addEventListener("click", handleEvent);
+    button.addEventListener("mouseover", handleEvent);
+  </script>
+</body>
+</html>

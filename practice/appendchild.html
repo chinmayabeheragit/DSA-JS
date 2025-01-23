@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="container">Existing Content:</div>
+  <script>
+    const container = document.getElementById("container");
+
+    // Create a new <p> element
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a dynamically added paragraph.";
+
+    // Add the new <p> element as a child of #container
+    container.appendChild(newParagraph);
+  </script>
+</body>
+</html>

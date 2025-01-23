@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button id="myButton">Click Me</button>
+  <script>
+    const button = document.getElementById("myButton");
+
+    // First event listener for the click event
+    button.addEventListener("click", () => {
+      console.log("First event listener triggered.");
+    });
+
+    // Second event listener for the same click event
+    button.addEventListener("click", () => {
+      console.log("Second event listener triggered.");
+    });
+  </script>
+</body>
+</html>
