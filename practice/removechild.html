@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  <script>
+    const list = document.getElementById("list");
+
+    // Remove the second item (Item 2)
+    const itemToRemove = list.children[1];
+    list.removeChild(itemToRemove);
+  </script>
+</body>
+</html>

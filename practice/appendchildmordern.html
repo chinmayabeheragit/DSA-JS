@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="container"></div>
+  <script>
+    const container = document.getElementById("container");
+
+    // Create new elements
+    const newHeading = document.createElement("h1");
+    newHeading.textContent = "Dynamic Heading";
+
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Dynamic paragraph.";
+
+    // Append both elements to the container
+    container.append(newHeading, newParagraph);
+  </script>
+</body>
+</html>
