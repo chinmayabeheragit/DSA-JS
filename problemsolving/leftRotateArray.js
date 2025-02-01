@@ -1,19 +1,19 @@
 function rotateArray(arr) {
-    let n = arr.length; // Get array size
+    let n = arr.length; // Get the length of the array
     
-    let temp = arr[0]; // Store first element
+    let temp = arr[0]; // Store the first element (it will be moved to last)
     
-    // Shift elements left
+    // Loop from second element to last and shift each element one position left
     for (let i = 1; i < n; i++) {
-        arr[i - 1] = arr[i];
+        arr[i - 1] = arr[i]; // Move current element to the previous index
     }
     
-    // Move first element to last position
+    // Place the stored first element at the last position
     arr[n - 1] = temp;
     
-    return arr;
+    return arr; // Return the rotated array
 }
 
-// Example usage
+// Example array
 let arr = [1, 2, 3, 4, 5];
-console.log(rotateArray(arr)); // Output: [2, 3, 4, 5, 1]
+console.log(rotateArray(arr)); // Expected Output: [2, 3, 4, 5, 1]
