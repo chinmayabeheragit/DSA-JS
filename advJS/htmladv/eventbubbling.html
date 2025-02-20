@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="parent" style="padding: 20px; background-color: lightgray;">
+        <button id="child">Click Me</button>
+    </div>
+    
+    <script>
+    document.getElementById("parent").addEventListener("click", function() {
+        console.log("Parent Clicked!");
+    });
+    
+    document.getElementById("child").addEventListener("click", function() {
+        console.log("Button Clicked!");
+    });
+    </script> -->
+    <!-- <div id="parent" style="padding: 20px; background-color: lightgray;">
+        <button id="child">Click Me</button>
+    </div>
+    
+    <script>
+    document.getElementById("parent").addEventListener("click", function() {
+        console.log("Parent Clicked!");
+    }, true); // 'true' enables capturing phase
+    
+    document.getElementById("child").addEventListener("click", function() {
+        console.log("Button Clicked!");
+    }, true);
+    </script> -->
+    <!-- <form id="myForm">
+        <input type="text" placeholder="Enter text" required>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <script>
+    document.getElementById("myForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevents form submission
+        console.log("Form submission prevented!");
+    });
+    </script> -->
+
+    <!-- <div id="outer" style="padding: 20px; background-color: lightgray;">
+        <button id="inner">Click Me</button>
+    </div>
+    
+    <script>
+    document.getElementById("outer").addEventListener("click", function() {
+        console.log("Outer Div Clicked!");
+    });
+    
+    document.getElementById("inner").addEventListener("click", function(event) {
+        event.stopPropagation(); // Stops bubbling
+        console.log("Button Clicked!");
+    });
+    </script> -->
+
+    <button id="testBtn">Click Me</button>
+
+<script>
+document.getElementById("testBtn").addEventListener("click", function(event) {
+    event.stopImmediatePropagation();
+    console.log("First Event Listener!");
+});
+
+document.getElementById("testBtn").addEventListener("click", function() {
+    console.log("Second Event Listener!");
+});
+</script>
+
+    
+    
+    
+    
+</body>
+</html>
