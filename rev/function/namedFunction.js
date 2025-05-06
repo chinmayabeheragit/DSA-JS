@@ -15,13 +15,6 @@ var foo = function(){
 
 }
 so this is called function expression because it is assigned to a variable.
-but if we define a function like this
-
-var foo = function foo2(){
-    console.log(foo2)
-    console.log("chinmaya")
-}
-so this is called function statement because it is assigned to a variable.
 
 and also like 
 
