@@ -1,0 +1,11 @@
+const age = birthYear => 2025 - birthYear;
+const user = age(1229);
+console.log(user); // 796
+console.log(age(1998));
+console.log(this.age(2000)); // JavaScript looks for age on the this object, not in local scope.TypeError: this.age is not a function
+
+console.log(this.birthYear(2000)); // Similarly, birthYear is just a parameter inside the arrow function. It’s not a variable or function on
+console.log(age);
+
+//Arrow functions don’t have their own this. They use the this of their surrounding scope. But in your case, you're not even inside an object — you're working in global/module scope.
+//You get TypeError: this.age is not a function because age is not a property of this, it's a local constant. Similarly, birthYear is just a parameter, not a function on this.
