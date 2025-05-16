@@ -1,3 +1,4 @@
 const arr = [1, 2, 3];
 const doubled = arr.map((num) => num * 2);
 console.log(doubled); // Output: [2, 4, 6]
+console.log(arr); // Output: [1, 2, 3]

@@ -2,12 +2,12 @@ const person = {
     name: 'alice',
     age:30,
 
-    greet: function() {
+    greet: function() { // regular function or we can call traditional function 
         console.log('hello, my name is ' + this.name);
     },
 
-    sayAge(){
-        console.log('i m' + this.age + 'year old');
+    sayAge(){ // shorthand method definition this is an ES6 features method
+        console.log(`i m ${this.name} and  ${this.age}  'year old`);
     }
 };
 

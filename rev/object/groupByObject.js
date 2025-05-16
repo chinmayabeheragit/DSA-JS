@@ -37,5 +37,5 @@ const users = [
 // console.log(groupedByJob);
 
 
-const result = groupBy(users, 'name');
+const result = groupBy(users, 'job');
 console.log(result);

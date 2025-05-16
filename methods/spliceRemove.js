@@ -1,3 +1,6 @@
-const arr = [1, 2, 3, 4];
-arr.splice(1, 2); // Removes 2 elements starting at index 1
-console.log(arr); // Output: [1, 4]
+const arr = [1,2,3,4,5];
+const shallow = [...arr];
+
+arr.splice(1, 2);
+console.log('array', arr);
+console.log('shallow', shallow);
