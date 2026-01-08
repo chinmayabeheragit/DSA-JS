@@ -29,6 +29,6 @@ function two(arr, k) {
 }
 
 const arr = [1,2,3,4,5,6,7];
-two(arr,3);
+two(arr,1);
 console.log(arr);
 
