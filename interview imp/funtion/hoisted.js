@@ -337,13 +337,13 @@
 // Explanation:
 // The function 'fn' creates a closure that captures the variable 'a' with the value 2. Inside 'fn', there is another function that creates another closure, capturing its own variable 'a' with the value 3. When we call 'fn()()', we are calling the first returned function, which gives us the second returned function. Then, when we call that result with '()', we are calling the innermost function, which logs the value of 'a' in its own scope, which is 3. Therefore, 'fn()()();' outputs 3.
 
-const promise = new Promise((resolve, reject) => {
-    console.log("1");
-    resolve("done");
-    console.log("2");
-});
-promise.then(val => console.log(val));
-console.log("3");
+// const promise = new Promise((resolve, reject) => {
+//     console.log("1");
+//     resolve("done");
+//     console.log("2");
+// });
+// promise.then(val => console.log(val));
+// console.log("3");
 
 // Output:
 // 1
