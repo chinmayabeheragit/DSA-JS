@@ -352,3 +352,99 @@
 // done
 // Explanation:
 // When the Promise is created, the executor function is executed immediately. Therefore, "1" and "2" are logged in order. After that, the .then() method schedules a callback to log the resolved value "done". Meanwhile, the main thread continues executing and logs "3". Finally, after the current synchronous code finishes, the JavaScript engine processes the microtasks, which results in logging "done".
+
+
+// async function a(){
+//     console.log(1);
+//     await null;
+//     console.log(2);
+// }
+
+// async function b (){
+//     console.log(3);
+//     await null;
+//     console.log(4);
+// }
+
+// a()
+// b()
+
+// Output:
+// 1
+// 3    
+//2
+//4
+// Explanation:
+// When 'a()' is called, it logs "1" and then encounters 'await null', which causes the function to pause and schedule the rest of the function (logging "2") as a microtask. Next, 'b()' is called, which logs "3" and also encounters 'await null', causing it to pause and schedule the rest of the function (logging "4") as another microtask. After the current synchronous code finishes executing, the JavaScript engine processes the microtasks in the order they were scheduled. Therefore, "2" is logged before "4", resulting in the output: 1, 3, 2, 4.
+
+
+// const arr = [100, "JS", false, { age: 25 }];
+
+// arr.forEach(item => {
+//   console.log(item);
+// });
+
+// Output:
+// 100
+// JS
+// false
+// { age: 25 }
+// Explanation:
+// The forEach() method executes a provided function once for each array element. In this case, the function logs each item in the array to the console. Therefore, it logs 100, "JS", false, and the object { age: 25 } in order.
+
+
+// const arr = [100, "JS", true, null, {}, []];
+
+// arr.forEach(item => {
+//   console.log(typeof item);
+// });
+
+// Output:
+// number
+// string
+// boolean
+// object
+// object
+// object
+// Explanation:
+// The forEach() method executes a provided function once for each array element. In this case, the function logs the type of each item in the array using the typeof operator. Therefore, it logs "number" for 100, "string" for "JS", "boolean" for true, and "object" for null, {}, and [] (since in JavaScript, arrays and null are also considered objects).
+
+// const arr = [100, "JS", true, { name: "Dev" }];
+
+// arr.forEach(item => {
+//   if (typeof item === "number") {
+//     console.log(item * 2); //200
+//   } else if (typeof item === "string") {
+//     console.log(item.toUpperCase()); //JS
+//   } else if (typeof item === "object") {
+//     console.log(item.name); //Dev
+//   }
+// });
+
+// Output:
+// 200
+// JS
+// Dev
+// Explanation:
+// The forEach() method executes a provided function once for each array element. In this case, the function checks the type of each item in the array and performs different operations based on the type. For the number 100, it multiplies it by 2 and logs 200. For the string "JS", it converts it to uppercase and logs "JS". For the object { name: "Dev" }, it accesses the 'name' property and logs "Dev".
+
+
+// const data = [ 1,"hello",[10, 20],{ city: "Bangalore" }];
+
+// console.log(data[2][0]); // 10
+// console.log(data[3].city); // Bangalore
+
+
+// const p = Promise.resolve(5);
+
+// p.then(x => x * 2)
+//  .then(result => console.log(result));
+
+//  op - 10
+
+// Promise.resolve(1).then(x => x + 1).then(console.log);
+// Output:
+// 2
+// Explanation:
+// The code creates a resolved Promise with the value 1. The first .then() method takes the value (1), adds 1 to it, and returns 2. The second .then() method takes the result (2) and logs it to the console. Therefore, the output is 2.
+
