@@ -102,3 +102,12 @@ for(let i = 1; i<=10; i++){
 for(let i = 1; i<=10; i++){
     console.log(i*i*i);
 }
+
+let N = 1234567890
+let count = 0;
+
+while (N > 0){
+    count++;
+    N = (N / 10) | 0;
+}
+console.log(count)
