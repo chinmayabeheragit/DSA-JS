@@ -12,10 +12,12 @@
 // time complexity = 0(1) because the element address is calculated directly
 // space complexity = 0(1) because we are not using any extra space
 
-function findElement(arr, k){
+function findElement(arr, k, j){
     return arr[k];
+    return arr[j];
 }
 
 arr = [1, 2, 3, 4, 5, 6, 7];
 k = 2;
-console.log(findElement(arr,k));
+j = 3;
+console.log(findElement(arr,k,j));
